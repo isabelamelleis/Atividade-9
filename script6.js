@@ -1,10 +1,10 @@
 function verificarLetra () {
     let letraUsuario = prompt("Digite uma letra: ");
-    letraUsuario.toLowerCase();
-    if ((letraUsuario === "a") || (letraUsuario === "e") || (letraUsuario === "i") || (letraUsuario === "o") || (letraUsuario === "u")) {
-        console.log("A letra que você digitou é uma vogal.")
+    let letra = letraUsuario.toLowerCase();
+    if ((letra === "a") || (letra === "e") || (letra === "i") || (letra === "o") || (letra === "u")) {
+        alert("A letra que você digitou ('" + letraUsuario + "') é uma vogal.");
     } else {
-        console.log("A letra que você digitou é uma consoante.")
+        alert("A letra que você digitou ('" + letraUsuario + "') é uma consoante.");
     }
 }
 

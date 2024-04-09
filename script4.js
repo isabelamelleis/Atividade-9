@@ -5,8 +5,7 @@ function numerosDecresecentes() {
         numerosEmOrdem.push(numeros);
     }
     numerosEmOrdem.sort(function(a, b){return b-a}); //É uma função específica que já faz os números do array ficarem em ordem decrescente
-    console.log("Os números digitados, em ordem decrescente, ficam: ");
-    console.log(numerosEmOrdem);
+    alert("Os números digitados, agora em ordem decrescente, ficam: " + numerosEmOrdem);
 }
 
 numerosDecresecentes ();
