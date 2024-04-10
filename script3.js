@@ -12,7 +12,7 @@ function pedirBrutosGastos () {
     }
     if (totalBruto > totalGastos) {
         saldo = totalBruto - totalGastos;
-        alert("EMPRESA MAWER \nO ganho bruto anual foi de: R$" + totalBruto +". \nO gasto anual foi de: R$" + totalGastos + ". \nO lucro foi de: +R$" + saldo + ".");
+        alert("EMPRESA MAWER \nO ganho bruto anual foi de: R$" + totalBruto +". \nO gasto anual foi de: R$" + totalGastos + ". \nO lucro foi de: +R$" + saldo + "."); // "\n" faz quebra de linha
     } else {
         saldo = totalGastos - totalBruto;
         alert("EMPRESA MAWER \nO ganho bruto anual foi de: R$" + totalBruto +". \nO gasto anual foi de: R$" + totalGastos + ". \nO prejuízo foi de: -R$" + saldo + ".");
