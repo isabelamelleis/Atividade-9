@@ -1,36 +1,22 @@
-function totalBruto (ganhosMensais) {
-    return ganhosMensais.reduce((total, ganho) => total + ganho, 0);
-}
-
-function totalGastos(gastosMensais) {
-    return gastosMensais.reduce((total, gasto) => total + gasto, 0);
-}
-
-function lucroOuPrejuizo (ganhoBrutoAnual, gastosAnuais) {
-    return ganhoBrutoAnual >= gastosAnuais ? "lucro" : "prejuízo";
-}
-
-function calcularFinancasAnuais() {
-    let ganhosMensais = [];
-    let gastosMensais = [];
-
+function pedirBrutosGastos () {
+    let brutoMensal = 0;
+    let gastoMensal = 0;
+    let totalBruto = 0;
+    let totalGastos = 0;
+    let saldo = 0;
     for (let i = 0; i < 12; i++) {
-        let ganho = parseFloat(prompt("Digite o ganho bruto para o " + (i + 1) + "º mês:"));
-        let gasto = parseFloat(prompt("Digite os gastos para o " + (i + 1) + "º mês:"));
-        ganhosMensais.push(ganho);
-        gastosMensais.push(gasto);
+        brutoMensal = parseFloat(prompt("Digite o ganho bruto do " + (i + 1) + "º mês:"));
+        totalBruto = totalBruto + brutoMensal;
+        gastoMensal = parseFloat(prompt("Digite os gastos do " + (i + 1) + "º mês:"));
+        totalGastos = totalGastos + gastoMensal;
     }
-
-    let ganhoBrutoAnual = totalBruto (ganhosMensais);
-    let gastosAnuais = totalGastos(gastosMensais);
-    let saldoFinanceiro = ganhoBrutoAnual - gastosAnuais;
-
-    let resultado = lucroOuPrejuizo (ganhoBrutoAnual, gastosAnuais);
-
-    console.log("Ganho bruto anual: R$" + ganhoBrutoAnual.toFixed(2));
-    console.log("Total de gastos anuais: R$" + gastosAnuais.toFixed(2));
-    console.log("Saldo: R$" + saldoFinanceiro.toFixed(2));
-    console.log("A empresa teve um " + resultado);
+    if (totalBruto > totalGastos) {
+        saldo = totalBruto - totalGastos;
+        alert("EMPRESA MAWER \nO ganho bruto anual foi de: R$" + totalBruto +". \nO gasto anual foi de: R$" + totalGastos + ". \nO lucro foi de: +R$" + saldo + ".");
+    } else {
+        saldo = totalGastos - totalBruto;
+        alert("EMPRESA MAWER \nO ganho bruto anual foi de: R$" + totalBruto +". \nO gasto anual foi de: R$" + totalGastos + ". \nO prejuízo foi de: -R$" + saldo + ".");
+    }
 }
 
-calcularFinancasAnuais();
+pedirBrutosGastos ();
