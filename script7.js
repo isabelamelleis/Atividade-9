@@ -1,5 +1,5 @@
 function menu() {
-    let escolha = parseInt(prompt("Digite o número do sabor que você deseja: \n1-Chocolate \n2-Morango \n3-Creme \n4-Manga \n5-Melancia \n6-Vanilla Ice \n7-Céu Azul \n8-Brownie \n9-Hawaiano")); // "\n" faz quebra de linha
+    let escolha = parseInt(prompt("Digite o número do sabor que você deseja: \n1-Chocolate \n2-Morango \n3-Creme \n4-Manga \n5-Melancia \n6-Vanilla Ice \n7-Céu Azul \n8-Brownie \n9-Hawaiano"));
     switch (escolha) {
         case 1:
             alert("O sabor de Chocolate custa: R$ 1,50.");
