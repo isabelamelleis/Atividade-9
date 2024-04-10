@@ -3,14 +3,16 @@ function lancamento() {
     if (inicioContagem <= 0) {
         alert("Digite um tempo inicial válido.");
     }
-    let contador = setInterval(function() {
-        console.log(inicioContagem);
-        inicioContagem--;
-        if (inicioContagem < 1) {
-            clearInterval(contador);
-            alert("HORA DO LANÇAMENTO!!");
+    let contador = setInterval(
+        function contagem() {
+            console.log(inicioContagem);
+            inicioContagem--;
+            if (inicioContagem < 1) {
+                clearInterval(contador);
+                alert("HORA DO LANÇAMENTO!!");
+            }
         }
-    }, 1000); //Essa função é o que faz a contagem funcionar, e o "1000" serve para deixar em segundos o intervalo de contagem
+        ,1000); //Essa função é o que faz a contagem funcionar, e o "1000" serve para deixar em segundos o intervalo de contagem
 }
 
 lancamento();
